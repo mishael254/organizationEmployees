@@ -11,10 +11,14 @@ class AbstractIEmployee {
 class Employee:AbstractIEmployee {
 //implementing encapsulation rule
 private:
-	string First_name;
-	string Second_name;
+	
 	char Gender;
 	int Age;
+// using protected access modifier
+
+protected:
+	string First_name;
+	string Second_name;
 public: 
 	//creating getters and setters to access our private properties
 	void setFirst_name(string first_name) {
