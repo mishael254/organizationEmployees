@@ -96,6 +96,7 @@ public:
 	void fix_bug() {
 		cout << First_name<<" "<<Second_name << " is fixing a bug using " << Best_Programming_Language << endl;
 	}
+
 	//testing polymophism
 	void work() {
 		cout << " i analyse the code and use " << Best_Programming_Language << " to run my programs" << endl;
