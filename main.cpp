@@ -101,6 +101,12 @@ public:
 	}
 	
 };
+//creating another child class
+class Teacher : public Employee {
+
+
+
+};
 
 int main() {
 	//Employee employee1 = Employee("Mishael", "Ndegwa", 'M', 21);
