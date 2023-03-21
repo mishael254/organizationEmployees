@@ -69,7 +69,10 @@ public:
 		}
 
 	}
-	void work() {
+
+	//testing polymophism
+
+	virtual void work() {
 		cout << "I check in using gatepass, i drive to the parking lot , i update the register, i attend internal meetings " << endl;
 	}
 	//creating constructor
