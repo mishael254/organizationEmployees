@@ -192,6 +192,7 @@ int main() {
 	Employee* employee3 = &dev1;
 	Employee* employee4 = &teacher1;
 
+
 	employee3->work();
 	employee4->work();
 }
