@@ -69,6 +69,9 @@ public:
 		}
 
 	}
+	void work() {
+		cout << "I check in using gatepass, i drive to the parking lot , i update the register, i attend internal meetings " << endl;
+	}
 	//creating constructor
 	Employee(string first_name,string second_name,char gender,int age) {
 		First_name = first_name;
@@ -90,6 +93,10 @@ public:
 	void fix_bug() {
 		cout << First_name<<" "<<Second_name << " is fixing a bug using " << Best_Programming_Language << endl;
 	}
+	//testing polymophism
+	void work() {
+		cout << " i analyse the code and use " << Best_Programming_Language << " to run my programs" << endl;
+	}
 
 
  
@@ -107,7 +114,13 @@ public:
 	string Subject;
 
 	//come up with a method
-	// 
+	void teachLesson() {
+		cout << "I " << First_name << " love teaching " << Subject << endl;
+	}
+
+	void work() {
+		cout << "I take in attaches and interns who i teach " << Subject << " and assign them practice todo list to enhance what they have learnt" << endl;
+	}
 	//create a constructor
 	Teacher(string first_name, string second_name, char gender, int age, string subject)
 		:Employee(first_name, second_name, gender, age) {
@@ -168,4 +181,17 @@ int main() {
 	dev1.askforPromotion();//error generated is "the ask for promotion is inaccessible"
 	//fixing the error by making the inheritance public since its always private by default
 
+	//creating an object of class Teacher
+	Teacher teacher1 = Teacher("Linet ", "Wanjason", 'F', 25, "History");
+	teacher1.teachLesson();
+	teacher1.askforPromotion();
+	
+
+	//testing polymophysim
+	//a pointer of parent class can now hold reference to derive class object
+	Employee* employee3 = &dev1;
+	Employee* employee4 = &teacher1;
+
+	employee3->work();
+	employee4->work();
 }
