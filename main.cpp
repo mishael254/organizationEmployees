@@ -81,14 +81,14 @@ public:
 //inheritance 
 //creating a child class thats gonna be linked to Employee class 
 
-class Developer: Employee {
+class Developer: public Employee {
 public:
 	string Best_Programming_Language;
 
 
 	//creating a behaviour for this developer to do
 	void fix_bug() {
-		cout << getFirst_name()<< " is fixing a bug using " << Best_Programming_Language << endl;
+		cout << First_name<<" "<<Second_name << " is fixing a bug using " << Best_Programming_Language << endl;
 	}
 
 
@@ -147,4 +147,8 @@ int main() {
 
 	Developer dev1 = Developer("mishael", "ndegwa", 'M', 34, "C++");
 	dev1.fix_bug();
+	//now lets try to ask for promotion 
+	dev1.askforPromotion();//error generated is "the ask for promotion is inaccessible"
+	//fixing the error by making the inheritance public since its always private by default
+
 }
