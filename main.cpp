@@ -14,7 +14,7 @@ private:
 	
 	char Gender;
 	int Age;
-// using protected access modifier
+// using protected access modifier 
 
 protected:
 	string First_name;
