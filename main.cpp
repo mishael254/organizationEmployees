@@ -103,6 +103,17 @@ public:
 };
 //creating another child class
 class Teacher : public Employee {
+public:
+	string Subject;
+
+	//come up with a method
+	// 
+	//create a constructor
+	Teacher(string first_name, string second_name, char gender, int age, string subject)
+		:Employee(first_name, second_name, gender, age) {
+		Subject = subject;
+
+	}
 
 
 
